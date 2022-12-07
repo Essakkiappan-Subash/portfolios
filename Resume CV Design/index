@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Protfolio Website Design by me - Personal Resume webside</title>
+    
+    <meta property="og:title" content="My Protfolio Website Design by me - Personal Resume webside" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="https://essakkiappan-subash.github.io/portfolios/Resume%20CV%20Design/assets/img/og-image.png" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
 
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/cusbtsp.css">
