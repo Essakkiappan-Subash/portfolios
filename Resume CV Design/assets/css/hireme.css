@@ -117,3 +117,45 @@
 .social-icons{
     margin-top: -200px;
 }
+
+
+
+
+@media screen and (max-width: 1000px){
+    .map-form > input{
+        width: 60%;
+    }
+
+    .colorchange iframe{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .colorchange iframe{
+        width: 90%;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .map-form > input{
+        margin-bottom: 10px;
+        width: 80%;
+    }
+
+    .colorchange iframe{
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .map-form > input{
+        margin-bottom: 10px;
+        width: 90%;
+    }
+
+    .colorchange iframe{
+        height: 250px;
+    }
+}
