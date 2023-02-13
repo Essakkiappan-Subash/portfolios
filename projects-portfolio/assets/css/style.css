@@ -95,8 +95,12 @@
     border-radius: 28px;
     overflow: scroll;
 }
+.phone, .laptop, .ipad{
+    z-index: 1;
+}
 .phoneScreen::-webkit-scrollbar,
-.laptopScreen::-webkit-scrollbar{
+.laptopScreen::-webkit-scrollbar,
+.ipadScreen::-webkit-scrollbar{
     display: none;
 }
 .phoneApp{
@@ -160,6 +164,23 @@
 .laptopApp{
     width: 100%;
 }
+.ipad{
+    /* width: 600px; */
+    flex: 1;
+    position: relative;
+}
+.ipadScreen{
+    width: 370px;
+    height: 528.6px;
+    position: absolute;
+    top: 33.2px;
+    left: 32.4px;
+    border-radius: 5px;
+    overflow: scroll;
+}
+.ipadApp{
+    width: 100%;
+}
 /*  */
 
 /* Github */
@@ -203,10 +224,28 @@
 }
 .githubChart:hover .active:nth-child(2n+1){
     background-color: #195b2c;
+    animation: color-to 3s linear forwards;
 }
+/* @keyframes color-to {
+    50%{
+        background-color: #063f24;
+    }
+    0%, 100%{
+        background-color: #195b2c;
+    }
+} */
 .githubChart:hover .active:nth-child(2n){
     background-color: #063f24;
+    animation: color-from 3s linear forwards;
 }
+/* @keyframes color-from {
+    50%{
+        background-color: #195b2c;
+    }
+    0%, 100%{
+        background-color: #063f24;
+    }
+} */
 .githubSm{
     display: none;
 }
@@ -244,4 +283,8 @@
         color: #555;
         text-align: center;
     }
+}
+
+@media screen and (max-width:600px){
+    .ipad{}
 }
