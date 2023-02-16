@@ -116,6 +116,16 @@
 }
 .projectTitle{  
     font-size: 7vw;
+    position: relative;
+}
+.projectTitle::after{
+    content: '';
+    width: 10rem;
+    height: .4rem;
+    background: #FF8A2680;
+    position: absolute;
+    bottom: -20px;
+    left: 10px;
 }
 .projectDesc{
     font-size: 20px;
@@ -129,6 +139,7 @@
     border: 2px solid #555;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 .projectBtn::after{
     width: 100%;
@@ -263,6 +274,16 @@
     }
     .project:nth-child(2n){
         flex-direction: column;
+    }
+    .projectTitle::after{
+        display: none;
+        content: '';
+        width: 5rem;
+        height: .2rem;
+        background: #FF8A2680;
+        position: absolute;
+        bottom: -10px;
+        left: 60px;
     }
     .phone, .laptop{
         transform: none !important;
