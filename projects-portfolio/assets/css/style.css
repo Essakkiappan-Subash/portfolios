@@ -222,6 +222,10 @@
     flex-wrap: wrap;
     gap: 5px;
 }
+.githubTitle a{
+    color: #333;
+    text-decoration: none;
+}
 .box{
     width: 15px;
     height: 15px;
