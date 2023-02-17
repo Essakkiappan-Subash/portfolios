@@ -222,9 +222,14 @@
     flex-wrap: wrap;
     gap: 5px;
 }
-.githubTitle a{
+.githubTitle a,
+.githubSm a{
     color: #333;
     text-decoration: none;
+    transition: .5s;
+}
+.githubChart:hover .githubTitle a{
+    letter-spacing: 4px;
 }
 .box{
     width: 15px;
@@ -296,6 +301,7 @@
     .githubTitle{
         font-size: 10vh;
         text-align: center;
+        text-decoration: none;
     }
     .githubChart{
         display: none;
@@ -308,8 +314,20 @@
         color: #555;
         text-align: center;
     }
+    .githubSm p{
+        margin: 20px;
+        color: #555;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .fa-github{
+        color: #aaa;
+        font-size: 60px;
+    }
 }
 
-@media screen and (max-width:600px){
+/* @media screen and (max-width:600px){
     .ipad{}
-}
+} */
