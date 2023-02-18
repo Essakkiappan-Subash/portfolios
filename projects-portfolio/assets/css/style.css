@@ -37,7 +37,7 @@
 }
 .name{
     color: #333;
-    font-size: 10.5vw;
+    font-size: 11vw;
     line-height: 100vh;
     align-items: center;
     cursor: default;
@@ -139,7 +139,6 @@
     border: 2px solid #555;
     position: relative;
     overflow: hidden;
-    cursor: pointer;
 }
 .projectBtn::after{
     width: 100%;
@@ -201,6 +200,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+}
+.githubContainer a{
+    text-decoration: none;
 }
 .githubTitle{
     color: #333;
@@ -273,6 +275,9 @@
 
 
 @media screen and (max-width:1024px) {
+    .name{
+        font-size: 10vw;
+    }
     .projects{
         padding: 0 30px;
         text-align: center;
@@ -286,13 +291,6 @@
     }
     .projectTitle::after{
         display: none;
-        content: '';
-        width: 5rem;
-        height: .2rem;
-        background: #FF8A2680;
-        position: absolute;
-        bottom: -10px;
-        left: 60px;
     }
     .phone, .laptop{
         transform: none !important;
@@ -301,7 +299,6 @@
     .githubTitle{
         font-size: 10vh;
         text-align: center;
-        text-decoration: none;
     }
     .githubChart{
         display: none;
