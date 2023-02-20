@@ -76,7 +76,7 @@
     gap: 100px;
     align-items: center;
     overflow: hidden;
-}
+}   
 .project:nth-child(2n){
     flex-direction: row-reverse;
 }
@@ -122,7 +122,8 @@
     content: '';
     width: 10rem;
     height: .4rem;
-    background: #FF8A2680;
+    background: linear-gradient(to right,#642bff, #ff22e6);
+    border-radius: 2px;
     position: absolute;
     bottom: -20px;
     left: 10px;
@@ -139,20 +140,49 @@
     border: 2px solid #555;
     position: relative;
     overflow: hidden;
+    transition: .8s all;
+}
+.projectBtn:hover{
+    color: transparent;
+    animation-delay: 1s;
 }
 .projectBtn::after{
     width: 100%;
     height: 100%;
     content: "View Demo";
-    color: #222;
+    color: #ddd;
     position: absolute;
     top: 0;
     left: -100%;
-    background-color: #555;
+    background: linear-gradient(45deg, #642bffa0, #ff22e6a0);
     transition: 1s all;
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: btnAnimation 3.5s linear infinite;
+}
+@keyframes btnAnimation {
+    0%, 100%{
+        background: linear-gradient(45deg, #642bff80, #ff22e6a0);
+    }
+    10%, 90%{
+        background: linear-gradient(42deg, #642bff95, #ff22e695);
+    }
+    20%, 80%{
+        background: linear-gradient(39deg, #642bff99, #ff22e690);
+    }
+    30%, 70%{
+        background: linear-gradient(36deg, #642bffaa, #ff22e685);
+    }
+    40%, 60%{
+        background: linear-gradient(33deg, #642bffbb, #ff22e680);
+    }
+    50%{
+        background: linear-gradient(30deg, #642bffcc, #ff22e675);
+    }
+    /* 50%{
+        background: linear-gradient(45deg, #ff22e675, #642bffcc, #ff22e675);
+    } */
 }
 .projectBtn:hover.projectBtn::after{
     left: 0;
@@ -243,9 +273,11 @@
 }
 .active:nth-child(4n){
     background-color: #195b2c;
+    /* background: linear-gradient(45deg, #4400ff, #ff22e6); */
 }
 .githubChart:hover .active:nth-child(2n+1){
     background-color: #195b2c;
+    /* background: linear-gradient(45deg, #4400ff, #fc55e8); */
     animation: color-to 3s linear forwards;
 }
 /* @keyframes color-to {
@@ -257,7 +289,8 @@
     }
 } */
 .githubChart:hover .active:nth-child(2n){
-    background-color: #063f24;
+    background-color: #063f24;    
+    /* background: linear-gradient(45deg, #fc55e8, #642bff); */
     animation: color-from 3s linear forwards;
 }
 /* @keyframes color-from {
@@ -272,6 +305,25 @@
     display: none;
 }
 /* Github */
+
+/* scrollbar */
+::-webkit-scrollbar{
+    width: 8px;
+    background: #111;
+}
+::-webkit-scrollbar-track{
+    width: 10px;
+    height: 40px;
+    margin: 100px;
+    background: #222;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+    width: 4px;
+    background: linear-gradient(#642bff, #ff22e6);
+    border-radius: 10px;
+}
+/* scrollbar */
 
 
 @media screen and (max-width:1024px) {
@@ -292,7 +344,7 @@
     .projectTitle::after{
         display: none;
     }
-    .phone, .laptop{
+    .phone, .laptop, .ipad{
         transform: none !important;
     }
 
@@ -325,6 +377,28 @@
     }
 }
 
-/* @media screen and (max-width:600px){
-    .ipad{}
-} */
+@media screen and (max-width:600px){
+    .laptop img{
+        width: 338.25px;
+        height: 212.25px;
+    }
+    .laptopScreen{
+        width: 253.5px;
+        height: 157px;
+        top: 11px;
+        left: 169.5px;
+    }
+    .ipad img{
+        /* width: 294.446px; */
+        height: 400px;
+    }
+    .ipadScreen{
+        width: 246.67px;
+        height: 352px;
+        position: absolute;
+        top: 22.06px;
+        left: 21.5px;
+        border-radius: 5px;
+        overflow: scroll;
+    }
+}
