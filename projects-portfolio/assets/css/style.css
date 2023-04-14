@@ -209,6 +209,9 @@
     flex: 1;
     position: relative;
 }
+.ipad > img{
+    height: 600px;
+}
 .ipadScreen{
     width: 370px;
     height: 528.6px;
@@ -378,27 +381,30 @@
 }
 
 @media screen and (max-width:600px){
+    .laptop{
+        width: 100%;
+    }
     .laptop img{
-        width: 338.25px;
-        height: 212.25px;
+        width: 100%;
     }
     .laptopScreen{
-        width: 253.5px;
-        height: 157px;
-        top: 11px;
-        left: 169.5px;
+        width: 75%;
+        height: 73%;
+        top: 4.8%;
+        left: 11.5%;
+    }
+    .ipad{
+        width: 100%;
     }
     .ipad img{
-        /* width: 294.446px; */
-        height: 400px;
+        width: 100%;
+        height: auto;
     }
     .ipadScreen{
-        width: 246.67px;
-        height: 352px;
-        position: absolute;
-        top: 22.06px;
-        left: 21.5px;
+        width: 83.498%;
+        height: 87.1%;
+        top: 5.55%;
+        left: 7.46%;
         border-radius: 5px;
-        overflow: scroll;
     }
 }
